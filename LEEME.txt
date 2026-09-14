@@ -1,0 +1,56 @@
+# YouTube Downloader - Portable
+
+Descargador de videos y música de YouTube.
+
+## Instrucciones
+
+1. **Doble clic** en `YouTubeDownloader.exe`
+2. Se abrirá el navegador automáticamente
+3. Pega el enlace de YouTube y descarga
+
+## IMPORTANTE: Instalar FFmpeg
+
+El programa necesita **FFmpeg** para convertir videos/audio.
+
+### Instalación rápida:
+
+1. Ve a: https://www.gyan.dev/ffmpeg/builds/
+2. Descarga: **ffmpeg-release-essentials.zip** (sección "release builds")
+3. Extrae el zip en cualquier carpeta
+4. Copia la carpeta `bin` (dentro del zip extraído) a `C:\ffmpeg\`
+5. Abre **Variables de entorno** del sistema:
+   - Click derecho en "Este equipo" → Propiedades → Variables de entorno
+   - En "Variables del sistema", busca `Path` → Editar → Nuevo
+   - Agrega: `C:\ffmpeg\bin`
+   - Aceptar todo
+6. **Reinicia** la computadora
+7. Abre YouTubeDownloader.exe nuevamente
+
+### Verificar que funcionó:
+
+Abre una terminal (cmd) y escribe:
+```
+ffmpeg -version
+```
+Si muestra información, FFmpeg está instalado correctamente.
+
+## Solución de problemas
+
+| Problema | Solución |
+|----------|----------|
+| "FFmpeg no encontrado" | Sigue los pasos de arriba |
+| No abre navegador | Ve a http://localhost:5000 manualmente |
+| Puerto ocupado | Cierra otras instancias y vuelve a abrir |
+| Descarga lenta | Verifica tu conexión a internet |
+
+## Requisitos
+
+- Windows 10/11
+- Conexión a internet
+- FFmpeg instalado (ver arriba)
+
+## Notas
+
+- Los archivos se guardan en la carpeta `downloads/` junto al exe
+- No necesita Python ni otras dependencias
+- Configuración guardada en `.config/` junto al exe
